@@ -1,0 +1,68 @@
+
+
+
+                    Angular - Front End developement technology - web app design
+
+            Basic Commands
+
+            1. To instal angular CLI: npm i -g @angular/cli
+            2. To check angular version: ng v
+            3. To create angular project: ng new project-name
+            4. To run angular project: ng serve
+            5. To create a component : ng g c component-name
+            6. To create angular Services : ng g s service-folder/service-name
+            7. To create angular pipe : ng g p pipe-folder/pipe-name
+            8. To generate lazy loaded module : ng g m module-name --route products --module root-module
+
+            Basic Concepts
+
+            1. Module : Import 3rd party libraries, root module:AppModule
+            2. Component : we will get a html,style sheet,ts file, root component:AppComponent
+            3. Decorator : '@' to specify metadata
+            4. Data Binding : Shairing data within a component
+                4.1 One way Binding : data Shairing will be only at one direction at a time
+                    4.1.1 ts (component) file to html (view) file 
+                            4.1.1.1 String interpolation : {{variable-name}}
+                            4.1.1.2 Property Binding : [attribute-name]="property-name"
+                    4.1.2 html (view) file to ts (component) file
+                            4.1.2.1 Event Binding : (event-name)="function call"
+                            4.1.2.2 Event Binding using $event argument : (event-name)="function call($event)"
+                            4.1.2.3 Using Template Reference variable : #variable-name
+                4.2 Two way Binding : data Shairing will be only at two direction at a time
+                    4.2.1 Binding using ngModel : [(ngModel)]="variable-name"
+                        - Import FormsModule inside your project ,Module
+            5. Set up path for a component - AppRoutingModule
+                path setup inside Routes Array: {path:'path',component:component-name}
+                to redirect user requested html page , use router-outlet selector in root component html page
+            6. To redirect from one ts to another , we need navigateByURL() - Router class
+            7. Dependency Injection : To share data between dependent classes , in constructor
+                access-specifier variable-name:dependent-class-name
+            8. Angular Services : To share common data with all components
+            9. To call HTTP Methods
+                - Import HttpClientModule inside module file
+                - Use HttpClient class to get HTTP Methods
+            10. Asynchronus Function - RxJS
+                - Observable
+                    - subscribe(call back function) - resolved
+            11. Directives - To manipulate DOM 
+                - Component Directives
+                - Structural Directives : Add / Remove an html elements 
+                    - *ngFor : *ngFor="let variable-name of Array-name"
+                    - *ngIf : *ngIf="condtion" when condition==true then html element will added to DOM
+            12. ActivatedRoute - Provides access to information about a route associated with a component
+            13. Pipe :  accept an input value and return a transformed value
+                    - syntax:   value_expression | pipe-operator [ : format ]
+            14. Angular Forms :
+                - Template driven forms : create html view for the form in html page
+                - Model driven forms : create a model for the form in ts file
+                        - Reactive Forms : To validate user inputs
+                            - Import ReactiveFormsModule to AppModule
+                                - To make a component as Reactive
+                                    - Form group : Dependency Inject FormBuilder class
+                                    - Form Array : 
+                                    - Form Control : 
+            15. Parent Child communication
+                - Parent to Child : Input Decorator
+                - Child to Parent : Output Decorator
+            16. Lazy Loading : 
+

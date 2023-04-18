@@ -1,0 +1,41 @@
+<!-- Header-->
+<header class="">
+    <div >
+        <div class="text-center text-dark">
+            <img width="100%" height="400px" src="https://static.vecteezy.com/system/resources/previews/002/006/774/large_2x/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-backgroud-for-banner-market-ecommerce-free-vector.jpg" alt="shooping banner image">
+            <!-- <h1 class="display-4 fw-bolder">Shop in style</h1>
+            <p class="lead fw-normal text-dark-50 mb-0">Enjoy Shopping with E Cart</p> -->
+        </div>
+    </div>
+</header>
+<!-- Section-->
+<section class="py-1">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let product of allProducts | filter:searchkey:'title' ">
+                <div class="card h-100 p-4">
+                    <!-- Product image-->
+                    <img height="200px" class="card-img-top" [src]=product.image [alt]=product.title />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{product.title.slice(0,20)}}...</h5>
+                            <!-- Product price-->
+                           <span class="fw-bolder"> ${{product.price}}</span>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="d-flex justify-content-evenly">
+                            <!-- view -->
+                            <a class="btn btn-danger mt-auto" routerLink="view/{{product.id}}"> <i class="fa-solid fa-eye fa-1x"></i> </a>
+                            <!-- add to cart -->
+                            <button (click)="addtocart(product)" class="btn btn-success text-light"><i class="fa-solid fa-cart-plus fa-1x"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

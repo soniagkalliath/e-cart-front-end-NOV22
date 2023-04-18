@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chivo+Mono:wght@300&family=Cormorant+Garamond:wght@500&family=Dancing+Script:wght@600&family=Itim&family=Mohave&family=Moon+Dance&family=Noto+Serif+Ahom&family=Oleo+Script+Swash+Caps:wght@700&family=Poppins:wght@200&family=Rubik+Gemstones&family=Sofia+Sans:ital@1&family=Solitreo&family=Solway&display=swap');
+
+body{
+    font-family: 'Solway', serif;
+}
+
+:root {
+    --animate-duration: 5s;
+    --animate-delay: 2s;
+  }

@@ -1,0 +1,26 @@
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" routerLink=""><i class="fa-solid fa-cart-shopping fa-bounce me-2"></i> E - Cart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item">
+                    <!-- search input -->
+                    <input (keyup)="search($event)" style="width: 400px;" type="text" placeholder="Search products here!!!" class="form-control">
+                </li>
+            </ul>
+            <form class="d-flex">
+                <a class="btn text-light me-3" routerLink="products/wishlist">
+                    <i class="fa-solid fa-heart fa-beat me-1 text-danger"></i>
+                    Wishlist     
+                </a>
+                <a class="btn text-light" routerLink="products/cart">
+                    <i class="fa-solid fa-cart-plus fa-bounce me-1"></i>
+                    Cart
+                    <span class="badge bg-light text-primary ms-1 rounded-pill"> {{totalItemCount}} </span>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>
